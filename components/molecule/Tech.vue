@@ -1,110 +1,48 @@
 <template>
   <div class="text-center">
-
     <h2>{{ $t('projects.technologies') }}</h2>
-
     <v-chip
+      v-for="(tech, index) in technologies"
+      :key="index"
       class="ma-2"
-      color="accent"
       size="x-large"
       label
     >
-      <v-icon icon="mdi-language-html5" start></v-icon>
-      HTML
+      <v-icon v-if="tech.icon" :icon="tech.icon" start></v-icon>
+      {{ tech.name }}
     </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-language-css3" start></v-icon>
-      CSS
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-bootstrap" start></v-icon>
-      Bootstrap
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-language-javascript" start></v-icon>
-      JavaScript
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-nuxt" start></v-icon>
-      Nuxt
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-vuejs" start></v-icon>
-      Vue
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-vuetify" start></v-icon>
-      Vuetify
-    </v-chip>
-
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-git" start></v-icon>
-      Git
-    </v-chip>
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-jira" start></v-icon>
-      Jira
-    </v-chip>
-
-
-    <v-chip
-      class="ma-2"
-      color="accent"
-      size="x-large"
-      label
-    >
-      <v-icon icon="mdi-trello" start></v-icon>
-      Trello
-    </v-chip>
-
-    
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const technologies = ref([
+  { name: 'HTML', icon: 'mdi-language-html5' },
+  { name: 'Pug' },
+  { name: 'CSS', icon: 'mdi-language-css3' },
+  { name: 'SCSS' },
+  { name: 'Bootstrap', icon: 'mdi-bootstrap' },
+  { name: 'Figma' },
+  { name: 'JavaScript', icon: 'mdi-language-javascript' },
+  { name: 'Nuxt', icon: 'mdi-nuxt' },
+  { name: 'Vue', icon: 'mdi-vuejs' },
+  { name: 'Vuetify', icon: 'mdi-vuetify' },
+  { name: 'Tailwind' },
+  { name: 'Axios' },
+  { name: 'Git', icon: 'mdi-git' },
+  { name: 'GitHub', icon: 'mdi-github' },
+  { name: 'Rest API' },
+  { name: 'Postman' },
+  { name: 'Jira', icon: 'mdi-jira' },
+  { name: 'Trello', icon: 'mdi-trello' },
+  { name: 'Pixel Perfect' },
+  { name: 'TMetrics' }
+]);
+</script>
+
+<style scoped>
+.text-center {
+  text-align: center;
+}
+</style>
