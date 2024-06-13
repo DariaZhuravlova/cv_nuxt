@@ -78,7 +78,7 @@ img {
 
 .accent--text {
   font-weight: bold;
-  color: #6366F1;
+  color: var(--accent-color);
 }
 
 a {

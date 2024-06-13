@@ -5,7 +5,7 @@
     <a :href="project.website" target="_blank">
       <v-img :src="project.image" ></v-img>
     </a>
-    <h2>{{ $t(`projects.descriptions.${project.id}`) }}</h2>
+    <h3>{{ $t(`projects.descriptions.${project.id}`) }}</h3>
     <h2>{{ $t('projects.technologies') }}:</h2>
     <v-chip-group>
       <v-chip v-for="(tech, index) in project.technologies" :key="index">{{ tech }}</v-chip>

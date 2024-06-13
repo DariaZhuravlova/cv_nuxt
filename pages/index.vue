@@ -7,6 +7,16 @@
 
 <style>
 
+:root {
+  --accent-color: #6366F1;
+  --accent-color-hover: #4F46E5;
+  --bg-color: #f9fafb;
+  --text-color: #1f2937;
+  --text-color-hover: #374151;
+  --text-color-light: #6b7280;
+  --text-color-light-hover: #9ca3af;
+}
+
 body {
   font-family: 'Inter', sans-serif;
 }

@@ -48,7 +48,7 @@
     "id": 6,
     "name": "B.R.O.",
     "description": "Описание проекта Bro Mobile",
-    "image": "../projects/bro.png",
+    "image": "../projects/bro.jpg",
     "technologies": ["Vue", "SCSS", "Pug", "Bootstrap"],
     "github": "https://github.com/username/bromobile",
     "website": "https://bro-mobile.savvydev.tech "

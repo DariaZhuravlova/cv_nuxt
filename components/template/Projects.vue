@@ -2,28 +2,21 @@
   <v-container>
     <h2 class="text-center">{{ $t('projects.projects') }}</h2>
     <v-row v-if="!isLoading">
-      <v-col v-for="project in paginatedProjects" :key="project.id" cols="12" sm="6" md="6">
+      <v-col v-for="project in paginatedProjects" :key="project.id" cols="12" sm="6" md="4">
         <v-card class="project-card">
           <a :href="`/projects/${project.id}`" class="project-link">
-            <!-- <v-card-title class="project-card-title">
-              <v-icon size="48">{{ project.icon }}</v-icon>
-              <h3>{{ project.name }}</h3>
-            </v-card-title> -->
+            <v-img :src="project.image" class="project-image"></v-img>
             <v-card-title class="project-card-title">
               <h3>{{ project.name }}</h3>
               <v-spacer></v-spacer>
               <div class="links">
-                <a :href="project.website" target="_blank"><v-icon color="accent">mdi-web</v-icon></a>
-                <a :href="project.github" target="_blank"><v-icon color="accent">mdi-github</v-icon></a>
-
+                <a :href="project.website" target="_blank"><v-icon>mdi-web</v-icon></a>
+                <a :href="project.github" target="_blank"><v-icon>mdi-github</v-icon></a>
               </div>
             </v-card-title>
             <v-card-text class="project-card-text">
               {{ $t(`projects.descriptions.${project.id}`) }}
             </v-card-text>
-            <v-chip-group class="tech-chip-group">
-              <v-chip v-for="(tech, index) in project.technologies" :key="index">{{ tech }}</v-chip>
-            </v-chip-group>
           </a>
         </v-card>
       </v-col>
@@ -77,24 +70,19 @@ onMounted(fetchProjects);
 <style scoped>
 .text-center {
   text-align: center;
-  /* margin-bottom: 20px; */
 }
 
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 20px;
-  padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   border-radius: 10px;
-  /* background-color: #fff; */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   height: 100%;
-  min-width: 300px;
-  max-width: 500px;
+  overflow: hidden;
 }
 
 .project-card::before {
@@ -106,7 +94,7 @@ onMounted(fetchProjects);
   bottom: 0;
   border-radius: 10px;
   padding: 2px;
-  background: linear-gradient(45deg, #A5B4FC, #6366F1);
+  /* background: linear-gradient(45deg, #A5B4FC, var(--accent-color)); */
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -122,7 +110,6 @@ onMounted(fetchProjects);
 
 .project-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* transform: translateY(-5px); */
 }
 
 .project-link {
@@ -131,7 +118,18 @@ onMounted(fetchProjects);
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+
+.project-image {
+  width: 99%;
+  margin: 0 auto;
+  object-fit: cover;
+  padding: 4px;
+  border-radius: 10px 10px 0 0;
 }
 
 .project-card-title {
@@ -140,12 +138,9 @@ onMounted(fetchProjects);
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 10px;
-  font-size: 24px;
-  color: #6366F1;
+  font-size: 20px;
   font-weight: bold;
 }
-
-
 
 .links {
   display: flex;
@@ -160,20 +155,8 @@ onMounted(fetchProjects);
   text-align: center;
 }
 
-.tech-chip-group {
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.tech-chip-group v-chip {
-  margin: 5px;
-}
-
 .v-pagination {
   margin-top: 40px;
-
 }
 
 @media (min-width: 768px) {

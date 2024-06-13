@@ -108,6 +108,6 @@ watch(group, () => {
 }
 
 .icon-link:hover, .icon-link-drawer:hover {
-  color: #6366F1;
+  color: var(--accent-color);
 }
 </style>

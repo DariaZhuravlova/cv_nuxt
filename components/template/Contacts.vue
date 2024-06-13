@@ -81,7 +81,7 @@ const submitForm = () => {
 }
 
 .footer-icon:hover {
-  color: #6366F1;
+  color: var(--accent-color);
 }
 
 @media (min-width: 768px) {
