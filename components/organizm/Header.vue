@@ -28,14 +28,19 @@
 
       </v-app-bar>
 
-      <v-navigation-drawer v-model="drawer" location="left" temporary>
+      <v-navigation-drawer v-model="drawer" location="left" temporary class="drawer">
         <v-list :items="items">
           <template v-for="item in items" :key="item.value">
-            <Nuxt-Link :to="item.to" class="icon-link">
+            <Nuxt-Link :to="item.to" class="icon-link-drawer">
+              <v-icon :icon="item.icon"></v-icon>
+              <!-- <v-list-item prepend-icon :title="item.title" :value="item.value"></v-list-item> -->
               <v-list-item-content>{{ item.title }}</v-list-item-content>
             </Nuxt-Link>
           </template>
+          <v-divider></v-divider>
+          <atom-social></atom-social> 
         </v-list>
+        
       </v-navigation-drawer>
 
       <v-main>
@@ -63,11 +68,10 @@ function toggleTheme () {
 const drawer = ref(false);
 const group = ref(null);
 const items = ref([
-  { title: `${$t('about.about')}`, value: 'about', to: '/about' },
-  { title: `${$t('projects.projects')}`, value: 'projects', to: '/projects' },
-  { title: `${$t('contact.contact')}`, value: 'contact', to: '/contact' },
+  { title: $t('about.about'), value: 'about', to: '/about', icon: 'mdi-information-outline' },
+  { title: $t('projects.projects'), value: 'projects', to: '/projects', icon: 'mdi-folder-outline' },
+  { title: $t('contact.contact'), value: 'contact', to: '/contact', icon: 'mdi-email-outline' },
 ]);
-
 
 const { locale } = useI18n();
 const toggleLanguage = () => {
@@ -89,11 +93,21 @@ watch(group, () => {
 
 <style scoped>
 
-.icon-link {
+.drawer {
+  padding: 20px;
+}
+
+.icon-link-drawer {
   color: inherit;
   text-decoration: none;
-  display: block;
-  margin-left: 20px;
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.icon-link:hover, .icon-link-drawer:hover {
+  color: #6366F1;
 }
 </style>

@@ -5,8 +5,8 @@
       
       <div class="address">
         
-        <a href="https://t.me/dariazhuravleva"><v-icon class="tg">mdi-send</v-icon> {{ $t('contact.contactTg') }}</a>
-        <a href="mailto:dariazhur89@gmail.com"><v-icon>mdi-email</v-icon> {{ $t('contact.contactEmail') }}</a>
+        <a href="https://t.me/dariazhuravleva" target="_blank"><v-icon class="tg">mdi-send</v-icon> {{ $t('contact.contactTg') }}</a>
+        <a href="mailto:dariazhur89@gmail.com" target="_blank"><v-icon>mdi-email</v-icon> {{ $t('contact.contactEmail') }}</a>
         
       </div>
       <div class="form">
@@ -68,6 +68,20 @@ const submitForm = () => {
 
 .tg {
   transform: rotate(-30deg);
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icon {
+  color: inherit;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.footer-icon:hover {
+  color: #6366F1;
 }
 
 @media (min-width: 768px) {
