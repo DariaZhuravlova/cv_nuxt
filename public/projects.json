@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Leonardo",
+    "description": "Описание проекта Leonardo",
+    "image": "../projects/leonardo.png",
+    "technologies": ["HTML", "CSS", "JS", "Bootstrap", "Swiper.js"],
+    "github": "https://github.com/VinITAAcademy/leonardo",
+    "website": "https://leonardo.intita.com "
+  },
+  {
+    "id": 2,
+    "name": "Piano",
+    "description": "Описание проекта Piano",
+    "image": "../projects/piano.png",
+    "technologies": ["HTML", "CSS", "JS", "Bootstrap", "Swiper.js"],
+    "github": "https://github.com/VinITAAcademy/piano",
+    "website": "https://piano.intita.com "
+  },
+  {
+    "id": 3,
+    "name": "GetStrong",
+    "description": "Описание проекта GetStrong",
+    "image": "../projects/get_strong.png",
+    "technologies": ["HTML", "CSS", "JS", "Bootstrap", "Swiper.js"],
+    "github": "https://github.com/VinITAAcademy/get_strong.git",
+    "website": "https://getstrong.intita.com "
+  },
+  {
+    "id": 4,
+    "name": "Maria Steha",
+    "description": "Описание проекта Maria Steha",
+    "image": "../projects/steha.png",
+    "technologies": ["HTML", "CSS", "JS", "Bootstrap", "Swiper.js"],
+    "github": "https://github.com/VinITAAcademy/english_with_me",
+    "website": "https://mariasteha.intita.com "
+  },
+  {
+    "id": 5,
+    "name": "Bilenko",
+    "description": "Описание проекта Bilenko",
+    "image": "../projects/bilenko.png",
+    "technologies": ["HTML", "CSS", "JS", "Bootstrap", "Swiper.js"],
+    "github": "https://github.com/VinITAAcademy/bilenko",
+    "website": "https://bilenko.intita.com "
+  },
+  {
+    "id": 6,
+    "name": "B.R.O.",
+    "description": "Описание проекта Bro Mobile",
+    "image": "../projects/bro.png",
+    "technologies": ["Vue", "SCSS", "Pug", "Bootstrap"],
+    "github": "https://github.com/username/bromobile",
+    "website": "https://bro-mobile.savvydev.tech "
+  },
+  {
+    "id": 7,
+    "name": "EduHUB",
+    "description": "Описание проекта Hub",
+    "image": "../projects/hub.png",
+    "technologies": ["Nuxt", "Vuex", "Vuetify", "Axios", "Express"],
+    "github": " https://github.com/VinITAAcademy/eduhub_front.git",
+    "website": "https://hub.intita.com"
+  }
+]
+

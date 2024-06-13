@@ -1,0 +1,38 @@
+{
+  "about": {
+    "about": "About me",
+    "hello": "Hello, my name is ",
+    "name": "Daria Zhuravlova. ",
+    "me": "I'm ",
+    "position": "Front-end developer, ",
+    "description": "who likes to create and provide unique products",
+    "downloadCV": "Download CV"
+  },
+  "contact": {
+    "contact": "Contacts",
+    "contactTg": "Contact me on Telegram",
+    "contactEmail": "Contact me via email",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "success": "Your message has been sent",
+    "error": "An error occurred while sending your message"
+    
+  },
+  "projects": {
+    "projects": "Projects",
+    "more": "more",
+    "technologies": "Technologies",
+    "descriptions": {
+      "1": "Leonardo Art Studio Landing",
+      "2": "Landing for a piano teacher",
+      "3": "Landing for small business support program",
+      "4": "Landing for an English tutor",
+      "5": "Landing for Choreographer Bilenko",
+      "6": "Fraud Quiz PWA",
+      "7": "Site for finding co-working spaces EduHUB"
+    }
+    
+  } 
+}
