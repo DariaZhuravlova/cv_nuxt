@@ -2,19 +2,18 @@
   <v-container>
     <div class="box">
       <div class="left">
-        <h2>{{ $t('about.about') }}</h2>
+        <h2>{{ t('about.about') }}</h2>
         <p class="description">
-        <span>{{ $t('about.hello') }}</span>
-        <span> {{ $t('about.name') }}</span>
-        <br>
-        <span>{{ $t('about.me') }}</span>
-        <span class="accent--text">{{ $t('about.position') }}</span>
-        <span>{{ $t('about.description') }}</span>
+          <span>{{ t('about.hello') }}</span>
+          <span> {{ t('about.name') }}</span>
+          <br>
+          <span>{{ t('about.me') }}</span>
+          <span class="accent--text">{{ t('about.position') }}</span>
+          <span>{{ t('about.description') }}</span>
         </p>
         <v-btn color="accent">
-          <v-icon icon="mdi-download"></v-icon>
-          <v-spacer></v-spacer>
-          <a :href="'/assets/CV_Daria.pdf'" download="CV_Daria.pdf">{{ $t('about.downloadCV') }}</a>
+          <v-icon left icon="mdi-download"></v-icon>
+          <a :href="cvPath" download="CV_Daria.pdf">{{ t('about.downloadCV') }}</a>
         </v-btn>
       </div>
       <div class="right">
@@ -31,9 +30,9 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 
-
-
+const cvPath = 'CV_Daria.pdf';
 </script>
+
 
 <style scoped>
 
