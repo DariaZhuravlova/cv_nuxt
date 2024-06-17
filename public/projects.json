@@ -48,7 +48,7 @@
     "id": 6,
     "name": "B.R.O.",
     "description": "Описание проекта Bro Mobile",
-    "image": "../projects/bro.jpg",
+    "image": "../projects/bro.png",
     "technologies": ["Vue", "SCSS", "Pug", "Bootstrap"],
     "github": "https://github.com/username/bromobile",
     "website": "https://bro-mobile.savvydev.tech "
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "EduHUB",
     "description": "Описание проекта Hub",
-    "image": "../projects/hub.png",
+    "image": "../projects/eduhub.png",
     "technologies": ["Nuxt", "Vuex", "Vuetify", "Axios", "Express"],
     "github": " https://github.com/VinITAAcademy/eduhub_front.git",
     "website": "https://hub.intita.com"
